@@ -1,6 +1,6 @@
 import { IoMdClose } from "react-icons/io";
 import { FaLaptop, FaCamera, FaChartBar, FaPencilAlt } from 'react-icons/fa';
-import project1Image from '../../public/asset/project1.jpg'; // Import project images
+import project1Image from '../../public/asset/project1.jpg';
 import project2Image from '../../public/asset/project2.jpg';
 import project3Image from '../../public/asset/project3.jpg';
 import project4Image from '../../public/asset/project4.jpg';
@@ -70,7 +70,7 @@ const AboutUsDrawer = ({ isOpen, onClose, side }) => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4 mt-4">
+                    <div className="grid grid-cols-2 gap-6 mt-4">
                         <ProjectCard image={project1Image} projectName="Project 1" />
                         <ProjectCard image={project2Image} projectName="Project 2" />
                         <ProjectCard image={project3Image} projectName="Project 3" />
@@ -98,7 +98,7 @@ const ServiceCard = ({ icon, title, description }) => {
 const ProjectCard = ({ image, projectName }) => {
     return (
         <div className="relative">
-            <img src={image} alt={projectName} className="w-full h-auto rounded-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg" />
+            <img src={image} alt={projectName} className="w-full h-72 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg" />
             <div className="absolute bottom-0 left-0 right-0 bg-gray-800 bg-opacity-75 text-white text-center py-2 px-4 transition duration-300 opacity-0 hover:opacity-100">{projectName}</div>
         </div>
     );

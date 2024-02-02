@@ -12,7 +12,7 @@ const CountdownTimer = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             const currentDate = new Date();
-            const targetDate = new Date("2024-03-01T00:00:00"); // Set your target date here
+            const targetDate = new Date("2024-03-01T00:00:00"); 
 
             const totalSeconds = Math.floor((targetDate - currentDate) / 1000);
             const remainingWeeks = Math.floor(totalSeconds / (7 * 24 * 3600));

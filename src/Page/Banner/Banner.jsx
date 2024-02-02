@@ -17,12 +17,12 @@ const Banner = () => {
 
     const toggleContactDrawer = () => {
         setContactDrawerOpen(prevState => !prevState);
-        setAboutDrawerOpen(false); // Close the about drawer if open
+        setAboutDrawerOpen(false); 
     };
 
     const toggleAboutDrawer = () => {
         setAboutDrawerOpen(prevState => !prevState);
-        setContactDrawerOpen(false); // Close the contact drawer if open
+        setContactDrawerOpen(false); 
     };
 
     const [text] = useTypewriter({
@@ -31,7 +31,7 @@ const Banner = () => {
     });
 
     const [currentMedia, setCurrentMedia] = useState(banner1);
-    const [key, setKey] = useState(0); // Key to force remount of video element
+    const [key, setKey] = useState(0); 
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -44,11 +44,11 @@ const Banner = () => {
             } else {
                 setCurrentMedia(banner1);
             }
-            setKey(prevKey => prevKey + 1); // Increment key to force remount
-        }, 5000); // Change the media after 5 seconds (5000 milliseconds)
+            setKey(prevKey => prevKey + 1); 
+        }, 5000); 
 
         return () => clearTimeout(timer);
-    }, [currentMedia]); // Run the effect whenever currentMedia changes
+    }, [currentMedia]); 
 
     return (
         <div className="relative h-screen overflow-hidden">
@@ -58,7 +58,7 @@ const Banner = () => {
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div className="absolute inset-0 bg-black opacity-20"></div>
+            <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="font-roboto absolute inset-0 flex flex-col justify-center items-center text-white">
                 <img className='w-40 mx-auto' src={logo} alt="" />
                 <h1 className='text-5xl font-semibold text-center'>{text}<Cursor cursorStyle='_' /></h1>

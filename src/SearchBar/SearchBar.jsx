@@ -10,9 +10,7 @@ const SearchBar = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you can handle the form submission, such as sending the email to a backend server
         console.log('Email submitted:', email);
-        // Clear the input after submission
         setEmail('');
     };
 
